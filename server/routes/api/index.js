@@ -10,6 +10,8 @@ router.use("/google", googleRoutes)
 router.use("/books", bookRoutes)
 router.use('/users', userRoutes);
 
+
+//serve up react front-end in production
 router.use(function (req, res){
     res.sendFile(path.join(__dirname, "../../client/build/index.html"))
 });
